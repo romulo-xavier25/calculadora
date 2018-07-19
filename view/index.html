@@ -10,15 +10,13 @@
 </head>
 <body ng-controller="CalculadoraController">
 
-<div class="formCalc col-xs-3">
+<div class="formCalc col-xs-12 col-md-3">
 
 	<input type="text" name="valor1" class="form-control" placeholder="valor 1" ng-model="valorUm">
 
-	<button> + </button>
-
 	<input type="text" name="valor2" class="form-control" placeholder="valor 2" ng-model="valorDois">
 
-	<button class="btn btn-primary btn-block" ng-click="somar(valorUm, valorDois)">
+	<button class="btn btn-primary btn-block" ng-click="calcular(valorUm, valorDois)">
 		calcular
 	</button>
 
@@ -28,6 +26,12 @@
 
 </div>
 
+<div class="formCalc col-xs-12 col-md-1">
+	<button ng-click="somar()"> + </button>
+	<button ng-click="subtrair()"> - </button>
+	<button ng-click="multiplicar()"> * </button>
+	<button ng-click="dividir()"> / </button>
+</div>
 
 
 </body>
